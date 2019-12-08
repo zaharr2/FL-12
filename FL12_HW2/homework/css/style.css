@@ -67,3 +67,123 @@
     padding: 25px 50px;
   }
 }
+@media screen {
+  .tm-nav-item:hover .tm-nav-item-link, .box-work:nth-child(odd), input[name*="contact"]:focus {
+    background: lightskyblue;
+  }
+  .tm-nav-item:hover .tm-nav-item-link, .box-work:nth-child(odd) {
+    color: white;
+  }
+  .tm-banner {
+    background: linear-gradient(90deg, lightskyblue, burlywood);
+  }
+  .tm-banner-inner, .submit-btn {
+    background: white;
+  }
+  .tm-banner-text {
+    text-shadow: 5px 5px 3px #333;
+    animation: slidein 3s ease-out;
+  }
+  .flex-2-col {
+    display: inline-flex;
+  }
+  .flex-2-col .tm-team-description-container.flex-item {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+  }
+  .flex-2-col .tm-team-description-container .tm-section-title, .heading.tm-content-box .padding-medium h2 {
+    text-align: center;
+  }
+  .box-bg:hover {
+    background: lightgrey;
+  }
+  .heading.tm-content-box .padding-medium h2, .submit-btn {
+    color: lightskyblue;
+  }
+  .heading.tm-content-box .padding-medium ol {
+    list-style: lower-alpha;
+  }
+  .heading.tm-content-box .padding-medium ol li a, section {
+    position: relative;
+  }
+  .heading.tm-content-box .padding-medium ol li a:hover {
+    padding-left: 8px;
+  }
+  .heading.tm-content-box .padding-medium ol li a:hover:before, .text:after, section:before, section:after {
+    position: absolute;
+  }
+  .heading.tm-content-box .padding-medium ol li a:hover:before {
+    content: '>';
+    color: #666;
+    left: -1px;
+  }
+  .text:after {
+    content: 'New';
+    top: -4px;
+    color: red;
+    font-size: small;
+    font-weight: 600;
+  }
+  .box-work {
+    padding: 10px;
+  }
+  .blocks .flex-item.tm-team-description-container p:last-of-type {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+  }
+  .blocks .flex-item.tm-team-description-container p:last-of-type, .box-work p {
+    font-style: italic;
+  }
+  .heading.tm-content-box .padding-medium ol li a:hover:before, .box-work p::first-letter {
+    font-weight: bold;
+  }
+  p.tm-section-description {
+    line-height: 30px;
+    text-indent: 25px;
+  }
+  .contact-form {
+    text-align: right;
+  }
+  input[name*="contact"] {
+    border: none;
+    border-bottom: 2px solid lightskyblue;
+  }
+  input[name*="contact"]:focus, section:before, section:after {
+    border-color: transparent;
+  }
+  textarea[name*="contact"] {
+    border: 2px solid lightskyblue;
+    background: url(../img/email-icon.png) 99% 95% no-repeat;
+    background-size: 30px;
+  }
+  .submit-btn {
+    border-color: lightskyblue;
+    border-width: 2px;
+    padding: 12px 20px;
+  }
+  #home, .tm-sidebar, section {
+    box-shadow: 0 0 10px 0 rgba(61, 55, 61, 0.7);
+  }
+  section:before, section:after {
+    content: '';
+    top: 0;
+    left: 0;
+    border-style: solid;
+  }
+  section:before {
+    border-width: 1.5em;
+    border-left-color: lightskyblue;
+    border-top-color: lightskyblue;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 200px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
