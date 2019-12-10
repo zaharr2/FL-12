@@ -99,7 +99,6 @@
   }
   .box-bg:hover {
     background: lightgrey;
-    font-style: italic;
   }
   .heading.tm-content-box .padding-medium h2, .submit-btn {
     color: lightskyblue;
@@ -135,7 +134,7 @@
     letter-spacing: 5px;
     word-spacing: 10px;
   }
-  .blocks .flex-item.tm-team-description-container p:last-of-type, .box-work p {
+  .box-bg:hover, .blocks .flex-item.tm-team-description-container p:last-of-type, .box-work p {
     font-style: italic;
   }
   .heading.tm-content-box .padding-medium ol li a:hover:before, .box-work p::first-letter {
