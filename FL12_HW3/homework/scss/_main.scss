@@ -1,3 +1,12 @@
+@function fontFamily ($foo) {
+  $font-family: ("source": "Source Sans Pro", "hind": "Hind", "fresca": "Fresca");
+  $result: "Source Sans Pro";
+  @if ($foo) {
+    $result: map_get($font-family, $foo)
+  }
+  @return $result, sans-serif
+}
+
 body {
   margin: 0;
 }
@@ -9,7 +18,7 @@ body {
   }
   p {
     display: grid;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: fontFamily('source');
     font-size: 24px;
     letter-spacing: 0.7px;
     line-height: 25px;
@@ -23,7 +32,7 @@ body {
   }
 }
 .header {
-  background: url(../img/m-h-day.jpg) no-repeat center;
+  background: $header-background-url no-repeat center;
   background-size: 100%;
   border-bottom-right-radius: 40%;
   height: 674px;
@@ -34,7 +43,7 @@ body {
       margin-top: 61px;
       .login {
         color: white;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: fontFamily('source');
         font-size: 20px;
         margin-left: 147px;
       }
@@ -42,7 +51,7 @@ body {
   }
   &_heading {
     color: #2c2f3c;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: fontFamily('source');
     font-size: 68px;
     font-weight: bold;
     letter-spacing: 1.8px;
@@ -53,7 +62,7 @@ body {
     z-index: 10;
     &:before {
       background-color: #14a0c7;
-      bottom: 0px;
+      bottom: 0;
       content: '';
       height: 50px;
       left: 1px;
@@ -63,7 +72,7 @@ body {
     }
   }
   &_text {
-    font-family: 'Hind', sans-serif;
+    font-family: fontFamily('hind');
     font-size: 16px;
     line-height: 23px;
     white-space: pre-line;
@@ -74,7 +83,7 @@ body {
     border: none;
     border-radius: 2px;
     color: white;
-    font-family: 'Fresca', sans-serif;
+    font-family: fontFamily('fresca');
     font-size: 18px;
     height: 48px;
     letter-spacing: 0.4px;
@@ -88,8 +97,8 @@ body {
 }
 .section {
   margin: 0 398px;
-  .section_text {
-    font-family: 'Source Sans Pro', sans-serif;
+  &_text {
+    font-family: fontFamily('source');
     font-size: 41px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -108,136 +117,97 @@ body {
       z-index: -1;
     }
   }
-  .section_card_wrap {
-    .section_card {
-      &:nth-child(1) {
-        background-color: #21232e;
-        border-radius: 6px;
-        color: white;
-        display: inline-flex;
-        margin-bottom: 23px;
-        padding: 20px;
-        .section_card_img {
-          border-radius: 6px;
-          min-width: 427px;
+  &_link {
+    color: white;
+    font-family: fontFamily('fresca');
+    letter-spacing: 0.4px;
+    line-height: 32px;
+    opacity: 0.7;
+    text-align: center;
+  }
+  &_card {
+    background-color: #21232e;
+    border-radius: 6px;
+    color: white;
+    display: inline-flex;
+    margin-bottom: 23px;
+    padding: 20px;
+    &_img {
+      border-radius: 6px;
+      min-width: 427px;
+    }
+    &_right_container {
+      display: inline-flex;
+      flex-direction: column;
+    }
+    &_heading {
+      font-family: fontFamily('source');
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      line-height: 26px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    &_text {
+      font-family: fontFamily('hind');
+      font-size: 16px;
+      line-height: 24px;
+      opacity: 0.7;
+      padding: 0 88px;
+      text-align: justify;
+    }
+  }
+  &_card {
+    &:nth-child(1) {
+      .section_card_img {
+        min-width: 427px;
+      }
+      .section_card_right_container {
+        .section_card_heading {
+          line-height: 26px;
         }
-        .section_card_right_container {
-          display: inline-flex;
-          flex-direction: column;
-          .section_card_heading {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 25px;
-            font-weight: 600;
-            letter-spacing: -0.4px;
-            line-height: 26px;
-            margin-top: 50px;
-            text-align: center;
-          }
-          .section_card_text {
-            font-family: 'Hind', sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            opacity: 0.7;
-            padding: 0 88px;
-            text-align: justify;
-          }
-          .section_link {
-            color: white;
-            font-family: 'Fresca', sans-serif;
-            letter-spacing: 0.4px;
-            line-height: 32px;
-            opacity: 0.7;
-            text-align: center;
-          }
+        .section_card_text {
+          padding: 0 88px;
+        }
+        .section_link {
+          line-height: 32px;
         }
       }
-      &:nth-child(2) {
-        background-color: #21232e;
-        border-radius: 6px;
-        color: white;
-        display: inline-flex;
-        margin-bottom: 23px;
-        padding: 20px;
-        .section_card_img {
-          border-radius: 6px;
-          min-width: 413px;
+    }
+    &:nth-child(2) {
+      .section_card_img {
+        min-width: 413px;
+      }
+      .section_card_right_container {
+        .section_card_heading {
+          line-height: 18px;
         }
-        .section_card_right_container {
-          display: inline-flex;
-          flex-direction: column;
-          .section_card_heading {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 25px;
-            font-weight: 600;
-            letter-spacing: -0.4px;
-            line-height: 18px;
-            margin-top: 50px;
-            text-align: center;
-          }
-          .section_card_text {
-            font-family: 'Hind', sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            opacity: 0.7;
-            padding: 0 88px;
-            text-align: justify;
-          }
-          .section_link {
-            color: white;
-            font-family: 'Fresca', sans-serif;
-            letter-spacing: 0.4px;
-            line-height: 26px;
-            opacity: 0.7;
-            text-align: center;
-          }
+        .section_link {
+          line-height: 26px;
         }
       }
-      &:nth-child(3) {
-        background-color: #21232e;
-        border-radius: 6px;
-        color: white;
-        display: inline-flex;
-        margin-bottom: 23px;
-        padding: 20px;
-        .section_card_img {
-          border-radius: 6px;
-          min-width: 455px;
+    }
+    &:nth-child(3) {
+      .section_card_img {
+        min-width: 455px;
+      }
+      .section_card_right_container {
+        .section_card_heading {
+          line-height: 48px;
+          margin-bottom: 38px;
         }
-        .section_card_right_container {
-          display: inline-flex;
-          flex-direction: column;
-          .section_card_heading {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 25px;
-            font-weight: 600;
-            letter-spacing: -0.4px;
-            line-height: 48px;
-            margin-bottom: 38px;
-            margin-top: 50px;
-            text-align: center;
-          }
-          .section_card_text {
-            font-family: 'Hind', sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            opacity: 0.7;
-            padding: 0 84px;
-            text-align: justify;
-          }
-          .section_link {
-            color: white;
-            font-family: 'Fresca', sans-serif;
-            letter-spacing: 0.4px;
-            line-height: 26px;
-            margin-top: 12px;
-            opacity: 0.7;
-            text-align: center;
-          }
+        .section_card_text {
+          padding: 0 84px;
+        }
+        .section_link {
+          line-height: 26px;
+          margin-top: 12px;
         }
       }
     }
   }
-  .section_banner {
+  &_banner {
     align-items: center;
     background: linear-gradient(45deg, #699a00, #2b59dd);
     border-radius: 6px;
@@ -247,40 +217,38 @@ body {
     margin-right: -41px;
     margin-top: 115px;
     padding: 0 160px;
-    .section_banner_text_wrap {
-      .section_banner_heading {
-        font-family: 'Hind', sans-serif;
-        font-size: 30px;
-        font-weight: 600;
-        letter-spacing: -0.1px;
-        line-height: 32px;
-        margin-bottom: 16px;
-        position: relative;
-        z-index: 10;
-        &:before {
-          background-color: #14a0c7;
-          bottom: 0;
-          content: '';
-          height: 50px;
-          left: 120px;
-          position: absolute;
-          width: 64px;
-          z-index: -1;
-        }
-      }
-      .section_banner_text {
-        color: white;
-        font-family: 'Hind', sans-serif;
-        margin-bottom: 40px;
-        opacity: 0.7;
+    &_heading {
+      font-family: fontFamily('hind');
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+      line-height: 32px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 10;
+      &:before {
+        background-color: #14a0c7;
+        bottom: 0;
+        content: '';
+        height: 50px;
+        left: 120px;
+        position: absolute;
+        width: 64px;
+        z-index: -1;
       }
     }
-    .section_banner_button {
+    &_text {
+      color: white;
+      font-family: fontFamily('hind');
+      margin-bottom: 40px;
+      opacity: 0.7;
+    }
+    &_button {
       background: #699a00;
       border: none;
       border-radius: 2px;
       color: white;
-      font-family: 'Fresca', sans-serif;
+      font-family: fontFamily('fresca');
       font-size: 18px;
       height: 48px;
       letter-spacing: 0.4px;
@@ -308,16 +276,16 @@ body {
         margin-right: 12px;
       }
     }
-    &_text {
-      font-family: 'Hind', sans-serif;
-      font-size: 14px;
-      line-height: 20px;
-      margin-top: 14px;
-      width: 310px;
-    }
-    &-cr {
-      font-family: 'Hind', sans-serif;
-      letter-spacing: -0.1px;
-    }
+  }
+  &_text {
+    font-family: fontFamily('hind');
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 14px;
+    width: 310px;
+  }
+  &-cr {
+    font-family: fontFamily('hind');
+    letter-spacing: -0.1px;
   }
 }

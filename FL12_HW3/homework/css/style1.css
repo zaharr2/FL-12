@@ -8,7 +8,7 @@ body {
     width: 45px; }
   .landing-logo p {
     display: grid;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
     letter-spacing: 0.7px;
     line-height: 25px;
@@ -31,12 +31,12 @@ body {
       margin-top: 61px; }
       .header-wrap div:not(.landing-logo) .login {
         color: white;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
         font-size: 20px;
         margin-left: 147px; }
   .header_heading {
     color: #2c2f3c;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 68px;
     font-weight: bold;
     letter-spacing: 1.8px;
@@ -47,7 +47,7 @@ body {
     z-index: 10; }
     .header_heading:before {
       background-color: #14a0c7;
-      bottom: 0px;
+      bottom: 0;
       content: '';
       height: 50px;
       left: 1px;
@@ -55,7 +55,7 @@ body {
       width: 300px;
       z-index: -1; }
   .header_text {
-    font-family: 'Hind', sans-serif;
+    font-family: "Hind", sans-serif;
     font-size: 16px;
     line-height: 23px;
     white-space: pre-line;
@@ -65,7 +65,7 @@ body {
     border: none;
     border-radius: 2px;
     color: white;
-    font-family: 'Fresca', sans-serif;
+    font-family: "Fresca", sans-serif;
     font-size: 18px;
     height: 48px;
     letter-spacing: 0.4px;
@@ -75,8 +75,8 @@ body {
 
 .section {
   margin: 0 398px; }
-  .section .section_text {
-    font-family: 'Source Sans Pro', sans-serif;
+  .section_text {
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 41px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -84,7 +84,7 @@ body {
     position: relative;
     text-align: center;
     z-index: 10; }
-    .section .section_text:before {
+    .section_text:before {
       background-color: #14a0c7;
       bottom: 4px;
       content: '';
@@ -93,114 +93,66 @@ body {
       right: 358px;
       width: 189px;
       z-index: -1; }
-  .section .section_card_wrap .section_card:nth-child(1) {
+  .section_link {
+    color: white;
+    font-family: "Fresca", sans-serif;
+    letter-spacing: 0.4px;
+    line-height: 32px;
+    opacity: 0.7;
+    text-align: center; }
+  .section_card {
     background-color: #21232e;
     border-radius: 6px;
     color: white;
     display: inline-flex;
     margin-bottom: 23px;
     padding: 20px; }
-    .section .section_card_wrap .section_card:nth-child(1) .section_card_img {
+    .section_card_img {
       border-radius: 6px;
       min-width: 427px; }
-    .section .section_card_wrap .section_card:nth-child(1) .section_card_right_container {
+    .section_card_right_container {
       display: inline-flex;
       flex-direction: column; }
-      .section .section_card_wrap .section_card:nth-child(1) .section_card_right_container .section_card_heading {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        letter-spacing: -0.4px;
-        line-height: 26px;
-        margin-top: 50px;
-        text-align: center; }
-      .section .section_card_wrap .section_card:nth-child(1) .section_card_right_container .section_card_text {
-        font-family: 'Hind', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        opacity: 0.7;
-        padding: 0 88px;
-        text-align: justify; }
-      .section .section_card_wrap .section_card:nth-child(1) .section_card_right_container .section_link {
-        color: white;
-        font-family: 'Fresca', sans-serif;
-        letter-spacing: 0.4px;
-        line-height: 32px;
-        opacity: 0.7;
-        text-align: center; }
-  .section .section_card_wrap .section_card:nth-child(2) {
-    background-color: #21232e;
-    border-radius: 6px;
-    color: white;
-    display: inline-flex;
-    margin-bottom: 23px;
-    padding: 20px; }
-    .section .section_card_wrap .section_card:nth-child(2) .section_card_img {
-      border-radius: 6px;
-      min-width: 413px; }
-    .section .section_card_wrap .section_card:nth-child(2) .section_card_right_container {
-      display: inline-flex;
-      flex-direction: column; }
-      .section .section_card_wrap .section_card:nth-child(2) .section_card_right_container .section_card_heading {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        letter-spacing: -0.4px;
-        line-height: 18px;
-        margin-top: 50px;
-        text-align: center; }
-      .section .section_card_wrap .section_card:nth-child(2) .section_card_right_container .section_card_text {
-        font-family: 'Hind', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        opacity: 0.7;
-        padding: 0 88px;
-        text-align: justify; }
-      .section .section_card_wrap .section_card:nth-child(2) .section_card_right_container .section_link {
-        color: white;
-        font-family: 'Fresca', sans-serif;
-        letter-spacing: 0.4px;
-        line-height: 26px;
-        opacity: 0.7;
-        text-align: center; }
-  .section .section_card_wrap .section_card:nth-child(3) {
-    background-color: #21232e;
-    border-radius: 6px;
-    color: white;
-    display: inline-flex;
-    margin-bottom: 23px;
-    padding: 20px; }
-    .section .section_card_wrap .section_card:nth-child(3) .section_card_img {
-      border-radius: 6px;
-      min-width: 455px; }
-    .section .section_card_wrap .section_card:nth-child(3) .section_card_right_container {
-      display: inline-flex;
-      flex-direction: column; }
-      .section .section_card_wrap .section_card:nth-child(3) .section_card_right_container .section_card_heading {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        letter-spacing: -0.4px;
-        line-height: 48px;
-        margin-bottom: 38px;
-        margin-top: 50px;
-        text-align: center; }
-      .section .section_card_wrap .section_card:nth-child(3) .section_card_right_container .section_card_text {
-        font-family: 'Hind', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        opacity: 0.7;
-        padding: 0 84px;
-        text-align: justify; }
-      .section .section_card_wrap .section_card:nth-child(3) .section_card_right_container .section_link {
-        color: white;
-        font-family: 'Fresca', sans-serif;
-        letter-spacing: 0.4px;
-        line-height: 26px;
-        margin-top: 12px;
-        opacity: 0.7;
-        text-align: center; }
-  .section .section_banner {
+    .section_card_heading {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      line-height: 26px;
+      margin-top: 50px;
+      text-align: center; }
+    .section_card_text {
+      font-family: "Hind", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      opacity: 0.7;
+      padding: 0 88px;
+      text-align: justify; }
+  .section_card:nth-child(1) .section_card_img {
+    min-width: 427px; }
+  .section_card:nth-child(1) .section_card_right_container .section_card_heading {
+    line-height: 26px; }
+  .section_card:nth-child(1) .section_card_right_container .section_card_text {
+    padding: 0 88px; }
+  .section_card:nth-child(1) .section_card_right_container .section_link {
+    line-height: 32px; }
+  .section_card:nth-child(2) .section_card_img {
+    min-width: 413px; }
+  .section_card:nth-child(2) .section_card_right_container .section_card_heading {
+    line-height: 18px; }
+  .section_card:nth-child(2) .section_card_right_container .section_link {
+    line-height: 26px; }
+  .section_card:nth-child(3) .section_card_img {
+    min-width: 455px; }
+  .section_card:nth-child(3) .section_card_right_container .section_card_heading {
+    line-height: 48px;
+    margin-bottom: 38px; }
+  .section_card:nth-child(3) .section_card_right_container .section_card_text {
+    padding: 0 84px; }
+  .section_card:nth-child(3) .section_card_right_container .section_link {
+    line-height: 26px;
+    margin-top: 12px; }
+  .section_banner {
     align-items: center;
     background: linear-gradient(45deg, #699a00, #2b59dd);
     border-radius: 6px;
@@ -210,8 +162,8 @@ body {
     margin-right: -41px;
     margin-top: 115px;
     padding: 0 160px; }
-    .section .section_banner .section_banner_text_wrap .section_banner_heading {
-      font-family: 'Hind', sans-serif;
+    .section_banner_heading {
+      font-family: "Hind", sans-serif;
       font-size: 30px;
       font-weight: 600;
       letter-spacing: -0.1px;
@@ -219,7 +171,7 @@ body {
       margin-bottom: 16px;
       position: relative;
       z-index: 10; }
-      .section .section_banner .section_banner_text_wrap .section_banner_heading:before {
+      .section_banner_heading:before {
         background-color: #14a0c7;
         bottom: 0;
         content: '';
@@ -228,17 +180,17 @@ body {
         position: absolute;
         width: 64px;
         z-index: -1; }
-    .section .section_banner .section_banner_text_wrap .section_banner_text {
+    .section_banner_text {
       color: white;
-      font-family: 'Hind', sans-serif;
+      font-family: "Hind", sans-serif;
       margin-bottom: 40px;
       opacity: 0.7; }
-    .section .section_banner .section_banner_button {
+    .section_banner_button {
       background: #699a00;
       border: none;
       border-radius: 2px;
       color: white;
-      font-family: 'Fresca', sans-serif;
+      font-family: "Fresca", sans-serif;
       font-size: 18px;
       height: 48px;
       letter-spacing: 0.4px;
@@ -261,12 +213,12 @@ body {
     justify-content: space-between; }
     .footer-wrap .landing-logo img {
       margin-right: 12px; }
-    .footer-wrap_text {
-      font-family: 'Hind', sans-serif;
-      font-size: 14px;
-      line-height: 20px;
-      margin-top: 14px;
-      width: 310px; }
-    .footer-wrap-cr {
-      font-family: 'Hind', sans-serif;
-      letter-spacing: -0.1px; }
+  .footer_text {
+    font-family: "Hind", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 14px;
+    width: 310px; }
+  .footer-cr {
+    font-family: "Hind", sans-serif;
+    letter-spacing: -0.1px; }
