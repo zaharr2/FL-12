@@ -1,4 +1,4 @@
-@function fontFamily ($foo, $font-family: $font-family, $result: $result) {
+@function fontFamily ($foo, $font-family: $font-family, $result: $default-font-family) {
   @if ($foo) {
     $result: map_get($font-family, $foo)
   }
