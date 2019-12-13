@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background: white; }
 
 .landing-logo {
   display: inline-flex; }
@@ -10,6 +11,7 @@ body {
     display: grid;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
+    font-weight: 600;
     letter-spacing: 0.7px;
     line-height: 25px;
     margin: 0; }
@@ -20,6 +22,7 @@ body {
       text-align: center; }
 
 .header {
+  color: #2c2f3c;
   background: url(../img/m-h-day.jpg) no-repeat center;
   background-size: 100%;
   border-bottom-right-radius: 40%;
@@ -35,7 +38,6 @@ body {
         font-size: 20px;
         margin-left: 147px; }
   .header_heading {
-    color: #2c2f3c;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 68px;
     font-weight: bold;
@@ -47,13 +49,13 @@ body {
     z-index: 10; }
     .header_heading:before {
       background-color: #14a0c7;
-      bottom: 0;
       content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
       height: 50px;
       left: 1px;
-      position: absolute;
-      width: 300px;
-      z-index: -1; }
+      width: 300px; }
   .header_text {
     font-family: "Hind", sans-serif;
     font-size: 16px;
@@ -86,18 +88,18 @@ body {
     z-index: 10; }
     .section_text:before {
       background-color: #14a0c7;
-      bottom: 4px;
       content: '';
-      height: 49px;
       position: absolute;
+      z-index: -1;
+      bottom: 4px;
+      height: 49px;
       right: 358px;
-      width: 189px;
-      z-index: -1; }
+      width: 189px; }
   .section_link {
+    line-height: 32px;
     color: white;
     font-family: "Fresca", sans-serif;
     letter-spacing: 0.4px;
-    line-height: 32px;
     opacity: 0.7;
     text-align: center; }
   .section_card {
@@ -126,31 +128,32 @@ body {
       font-size: 16px;
       line-height: 24px;
       opacity: 0.7;
-      padding: 0 88px;
       text-align: justify; }
   .section_card:nth-child(1) .section_card_img {
     min-width: 427px; }
-  .section_card:nth-child(1) .section_card_right_container .section_card_heading {
+  .section_card:nth-child(1) .section_card_heading {
     line-height: 26px; }
-  .section_card:nth-child(1) .section_card_right_container .section_card_text {
+  .section_card:nth-child(1) .section_card_text {
     padding: 0 88px; }
-  .section_card:nth-child(1) .section_card_right_container .section_link {
+  .section_card:nth-child(1) .section_link {
     line-height: 32px; }
   .section_card:nth-child(2) .section_card_img {
     min-width: 413px; }
-  .section_card:nth-child(2) .section_card_right_container .section_card_heading {
+  .section_card:nth-child(2) .section_card_heading {
     line-height: 18px; }
-  .section_card:nth-child(2) .section_card_right_container .section_link {
-    line-height: 26px; }
+  .section_card:nth-child(2) .section_card_text {
+    padding: 0 88px; }
+  .section_card:nth-child(2) .section_link {
+    line-height: 32px; }
   .section_card:nth-child(3) .section_card_img {
     min-width: 455px; }
-  .section_card:nth-child(3) .section_card_right_container .section_card_heading {
+  .section_card:nth-child(3) .section_card_heading {
     line-height: 48px;
     margin-bottom: 38px; }
-  .section_card:nth-child(3) .section_card_right_container .section_card_text {
+  .section_card:nth-child(3) .section_card_text {
     padding: 0 84px; }
-  .section_card:nth-child(3) .section_card_right_container .section_link {
-    line-height: 26px;
+  .section_card:nth-child(3) .section_link {
+    line-height: 32px;
     margin-top: 12px; }
   .section_banner {
     align-items: center;
@@ -173,13 +176,13 @@ body {
       z-index: 10; }
       .section_banner_heading:before {
         background-color: #14a0c7;
-        bottom: 0;
         content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
         height: 50px;
         left: 120px;
-        position: absolute;
-        width: 64px;
-        z-index: -1; }
+        width: 64px; }
     .section_banner_text {
       color: white;
       font-family: "Hind", sans-serif;

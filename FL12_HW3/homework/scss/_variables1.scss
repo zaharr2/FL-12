@@ -1,2 +1,13 @@
-$header-background-url: url(../img/m-h-day.jpg)
-
+$header-background-url: url(../img/m-h-day.jpg);
+$button-background-color: #699a00;
+$link-line-height: ("first": 32px, "second": 26px, "third": 26px);
+$card-image-min-width: ("first": 427px, "second": 413px, "third": 455px);
+$card-heading-line-height: ("first": 26px, "second": 18px, "third": 48px);
+$card-text-padding-x: ("first": 88px, "second": 88px, "third": 84px);
+$font-family: ("source": "Source Sans Pro", "hind": "Hind", "fresca": "Fresca");
+$result: "Source Sans Pro";
+$heading-before-background-color: #14a0c7;
+$banner-gradient: linear-gradient(45deg, $button-background-color, #2b59dd);
+$header-font-color: #2c2f3c;
+$card-footer-background-color: #21232e;
+$body-background-color: white;

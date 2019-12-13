@@ -1,14 +1,70 @@
-@function fontFamily ($foo) {
-  $font-family: ("source": "Source Sans Pro", "hind": "Hind", "fresca": "Fresca");
-  $result: "Source Sans Pro";
+@function fontFamily ($foo, $font-family: $font-family, $result: $result) {
   @if ($foo) {
     $result: map_get($font-family, $foo)
   }
   @return $result, sans-serif
 }
 
+@mixin button {
+  background: $button-background-color;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-family: fontFamily('fresca');
+  font-size: 18px;
+  height: 48px;
+  letter-spacing: 0.4px;
+  width: 142px;
+}
+
+@mixin link-line-height ($number: "first") {
+  line-height: map_get($link-line-height, $number);
+}
+
+@mixin link-margin {
+  margin-top: 12px;
+}
+
+@mixin link ($number: "first") {
+  @include link-line-height($number);
+  color: white;
+  font-family: fontFamily('fresca');
+  letter-spacing: 0.4px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+@mixin section-card ($number) {
+  .section_card_img {
+    min-width: map_get($card-image-min-width, $number);
+  }
+  .section_card_heading {
+    line-height: map_get($card-heading-line-height, $number);
+    @if $number == third {
+      margin-bottom: 38px;
+    }
+  }
+  .section_card_text {
+    padding: 0 map_get($card-text-padding-x, $number);
+  }
+  .section_link {
+    @include link-line-height;
+    @if $number == third {
+      margin-top: 12px;
+    }
+  }
+}
+
+@mixin common-before {
+  background-color: $heading-before-background-color;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
 body {
   margin: 0;
+  background: $body-background-color;
 }
 .landing-logo {
   display: inline-flex;
@@ -20,6 +76,7 @@ body {
     display: grid;
     font-family: fontFamily('source');
     font-size: 24px;
+    font-weight: 600;
     letter-spacing: 0.7px;
     line-height: 25px;
     margin: 0;
@@ -32,6 +89,7 @@ body {
   }
 }
 .header {
+  color: $header-font-color;
   background: $header-background-url no-repeat center;
   background-size: 100%;
   border-bottom-right-radius: 40%;
@@ -50,7 +108,6 @@ body {
     }
   }
   &_heading {
-    color: #2c2f3c;
     font-family: fontFamily('source');
     font-size: 68px;
     font-weight: bold;
@@ -61,14 +118,11 @@ body {
     position: relative;
     z-index: 10;
     &:before {
-      background-color: #14a0c7;
+      @include common-before;
       bottom: 0;
-      content: '';
       height: 50px;
       left: 1px;
-      position: absolute;
       width: 300px;
-      z-index: -1;
     }
   }
   &_text {
@@ -79,15 +133,7 @@ body {
     word-spacing: 0.9px;
   }
   &_button {
-    background: #699a00;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    font-family: fontFamily('fresca');
-    font-size: 18px;
-    height: 48px;
-    letter-spacing: 0.4px;
-    width: 142px;
+    @include button;
   }
   .landing-logo {
     img {
@@ -107,26 +153,18 @@ body {
     text-align: center;
     z-index: 10;
     &:before {
-      background-color: #14a0c7;
+      @include common-before;
       bottom: 4px;
-      content: '';
       height: 49px;
-      position: absolute;
       right: 358px;
       width: 189px;
-      z-index: -1;
     }
   }
   &_link {
-    color: white;
-    font-family: fontFamily('fresca');
-    letter-spacing: 0.4px;
-    line-height: 32px;
-    opacity: 0.7;
-    text-align: center;
+    @include link;
   }
   &_card {
-    background-color: #21232e;
+    background-color: $card-footer-background-color;
     border-radius: 6px;
     color: white;
     display: inline-flex;
@@ -154,62 +192,23 @@ body {
       font-size: 16px;
       line-height: 24px;
       opacity: 0.7;
-      padding: 0 88px;
       text-align: justify;
     }
   }
   &_card {
     &:nth-child(1) {
-      .section_card_img {
-        min-width: 427px;
-      }
-      .section_card_right_container {
-        .section_card_heading {
-          line-height: 26px;
-        }
-        .section_card_text {
-          padding: 0 88px;
-        }
-        .section_link {
-          line-height: 32px;
-        }
-      }
+      @include section-card("first");
     }
     &:nth-child(2) {
-      .section_card_img {
-        min-width: 413px;
-      }
-      .section_card_right_container {
-        .section_card_heading {
-          line-height: 18px;
-        }
-        .section_link {
-          line-height: 26px;
-        }
-      }
+      @include section-card("second");
     }
     &:nth-child(3) {
-      .section_card_img {
-        min-width: 455px;
-      }
-      .section_card_right_container {
-        .section_card_heading {
-          line-height: 48px;
-          margin-bottom: 38px;
-        }
-        .section_card_text {
-          padding: 0 84px;
-        }
-        .section_link {
-          line-height: 26px;
-          margin-top: 12px;
-        }
-      }
+      @include section-card("third");
     }
   }
   &_banner {
     align-items: center;
-    background: linear-gradient(45deg, #699a00, #2b59dd);
+    background: $banner-gradient;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
@@ -227,14 +226,11 @@ body {
       position: relative;
       z-index: 10;
       &:before {
-        background-color: #14a0c7;
+        @include common-before;
         bottom: 0;
-        content: '';
         height: 50px;
         left: 120px;
-        position: absolute;
         width: 64px;
-        z-index: -1;
       }
     }
     &_text {
@@ -244,20 +240,12 @@ body {
       opacity: 0.7;
     }
     &_button {
-      background: #699a00;
-      border: none;
-      border-radius: 2px;
-      color: white;
-      font-family: fontFamily('fresca');
-      font-size: 18px;
-      height: 48px;
-      letter-spacing: 0.4px;
-      width: 142px;
+      @include button;
     }
   }
 }
 .footer {
-  background-color: #21232e;
+  background-color: $card-footer-background-color;
   color: white;
   margin-top: -74px;
   padding-left: 192px;
