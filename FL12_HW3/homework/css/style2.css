@@ -47,7 +47,7 @@ body {
     margin-top: 66px;
     position: relative;
     z-index: 10; }
-    .header_heading:before {
+    .header_heading:before, .section_text:before, .section_banner_heading:before {
       background-color: #ff4e33;
       content: '';
       position: absolute;
@@ -83,17 +83,13 @@ body {
     font-weight: 600;
     letter-spacing: 0.3px;
     line-height: 43px;
-    position: relative;
     text-align: center;
+    position: relative;
     z-index: 10; }
     .section_text:before {
-      background-color: #ff4e33;
-      content: '';
-      position: absolute;
-      z-index: -1;
       bottom: 4px;
       height: 49px;
-      right: 358px;
+      left: 560px;
       width: 189px; }
   .section_link {
     line-height: 32px;
@@ -175,10 +171,6 @@ body {
       position: relative;
       z-index: 10; }
       .section_banner_heading:before {
-        background-color: #ff4e33;
-        content: '';
-        position: absolute;
-        z-index: -1;
         bottom: 0;
         height: 50px;
         left: 120px;
