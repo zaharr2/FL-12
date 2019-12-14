@@ -68,8 +68,8 @@
 }
 
 body {
-  margin: 0;
   background: $body-background-color;
+  margin: 0;
 }
 
 .landing-logo {
@@ -96,10 +96,10 @@ body {
 }
 
 .header {
-  color: $header-font-color;
   background: $header-background-url no-repeat center;
   background-size: 100%;
   border-bottom-right-radius: 40%;
+  color: $header-font-color;
   height: 674px;
   padding: 20px 190px;
   &-wrap {
