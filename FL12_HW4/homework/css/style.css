@@ -1,10 +1,3 @@
-:root {
-  --black-color: #000;
-  --gray-color: #777;
-  --white-color: #FFFFFF;
-  --yellow-color: #bfba55;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,12 +30,12 @@ body {
   margin: 0;
 }
 .header-sub-title {
-  color: var(--yellow-color);
+  color: #bfba55;
   margin-top: 20px;
 }
 
 .button {
-  background-color: var(--white-color);
+  background-color: #FFFFFF;
   cursor: pointer;
   font-weight: 600;
   outline: none;
@@ -53,7 +46,7 @@ body {
 .header-button {
   border: none;
   border-radius: 25px;
-  color: var(--black-color);
+  color: #000;
   height: 50px;
   margin-top: 60px;
   width: 190px;
@@ -61,7 +54,7 @@ body {
 
 .navbar {
   align-items: center;
-  background-color: var(--white-color);
+  background-color: #FFFFFF;
   display: inline-flex;
   height: 102px;
   justify-content: center;
@@ -80,7 +73,7 @@ body {
 }
 
 .navbar-brand {
-  color: var(--black-color);
+  color: #000;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 3.9px;
@@ -90,14 +83,14 @@ body {
 }
 
 .navbar-link {
-  color: var(--gray-color);
+  color: #777;
   font-size: 20px;
   letter-spacing: 2px;
   text-decoration: none;
 }
 
 .navbar-link:hover {
-  color: var(--yellow-color);
+  color: #bfba55;
 }
 
 .navbar-link:not(:last-of-type) {
@@ -114,7 +107,7 @@ body {
 }
 
 .section-hr {
-  border-color: var(--gray-color);
+  border-color: #777;
   max-width: 900px;
   opacity: 0.1;
   width: 100%;
@@ -122,7 +115,7 @@ body {
 
 .blog {
   box-sizing: border-box;
-  color: var(--gray-color);
+  color: #777;
   font-size: 20px;
   max-width: 900px;
   padding-bottom: 74px;
@@ -134,18 +127,18 @@ body {
   width: 100%;
 }
 
-.blog-header h1 {
-  color: var(--black-color);
+.blog-header h2 {
+  color: #000;
   font-size: 36px;
   margin-bottom: 16px;
   margin-top: 40px;
 }
 
 .blog-button {
-  border-color: var(--gray-color);
+  border-color: #777;
   border-radius: 30px;
   border-width: 1px;
-  color: var(--gray-color);
+  color: #777;
   height: 60px;
   margin-top: 40px;
   width: 226px;
@@ -172,7 +165,7 @@ body {
 }
 
 .footer {
-  background-color: var(--black-color);
+  background-color: #000;
   display: inline-flex;
   height: 425px;
   /*padding: 0 20%;*/
@@ -201,11 +194,11 @@ body {
 }
 
 .footer-info h1 {
-  color: var(--white-color);
+  color: #FFFFFF;
 }
 
 .footer-info span {
-  color: var(--gray-color);
+  color: #777;
   font-size: 20px;
   line-height: 30px;
 }
