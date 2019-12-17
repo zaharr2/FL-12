@@ -12,7 +12,7 @@ body {
   align-items: center;
   background-attachment: fixed;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/home-bg.jpg');
-  background-position: 0 102px;
+  background-position: center 102px;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
