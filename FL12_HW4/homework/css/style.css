@@ -1,7 +1,7 @@
 :root {
+  --black-color: #000;
   --gray-color: #777;
   --white-color: #FFFFFF;
-  --black-color: #000;
   --yellow-color: #bfba55;
 }
 
@@ -16,73 +16,84 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 100vh;
+  align-items: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/home-bg.jpg');
+  background-position: 0 102px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  margin-top: 102px;
   text-align: center;
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/home-bg.jpg');
-  background-size: cover;
-  background-position: 0 -30%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  width: 100%;
 }
 
 .header-title {
-  font-size: 86px;
+  font-size: 80px;
   margin: 0;
 }
 .header-sub-title {
-  margin-top: 20px;
   color: var(--yellow-color);
+  margin-top: 20px;
 }
 
 .button {
-  text-transform: uppercase;
-  text-decoration: unset;
-  font-weight: 600;
-  outline: none;
   background-color: var(--white-color);
   cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  text-decoration: unset;
+  text-transform: uppercase;
 }
 
 .header-button {
   border: none;
-  color: var(--black-color);
-  width: 190px;
-  height: 50px;
   border-radius: 25px;
+  color: var(--black-color);
+  height: 50px;
   margin-top: 60px;
+  width: 190px;
 }
 
 .navbar {
-  top: 0;
-  position: fixed;
-  height: 102px;
-  width: 100vw;
-  padding: 0 15%;
+  align-items: center;
   background-color: var(--white-color);
   display: inline-flex;
+  height: 102px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.navbar-wrap {
   align-items: center;
+  display: flex;
+  height: 100%;
+  max-width: 1300px;
+  width: 100%;
 }
 
 .navbar-brand {
-  margin-right: auto;
+  color: var(--black-color);
   font-size: 24px;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 3.9px;
-  color: var(--black-color);
+  margin-left: 15px;
+  margin-right: auto;
+  text-transform: uppercase;
 }
 
 .navbar-link {
   color: var(--gray-color);
   font-size: 20px;
-  text-decoration: none;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .navbar-link:hover {
@@ -97,16 +108,25 @@ body {
 }
 
 .section {
-  margin: 135px 20%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-hr {
+  border-color: var(--gray-color);
+  max-width: 900px;
+  opacity: 0.1;
+  width: 100%;
 }
 
 .blog {
-  margin-top: 100px;
-  margin-bottom: 74px;
-  color: var(--gray-color);
-  min-width: 900px;
   box-sizing: border-box;
+  color: var(--gray-color);
   font-size: 20px;
+  max-width: 900px;
+  padding-bottom: 74px;
+  padding-top: 100px;
 }
 
 .blog-img {
@@ -117,30 +137,30 @@ body {
 .blog-header h1 {
   color: var(--black-color);
   font-size: 36px;
-  margin-top: 40px;
   margin-bottom: 16px;
+  margin-top: 40px;
 }
 
 .blog-button {
   border-color: var(--gray-color);
-  color: var(--gray-color);
-  width: 226px;
-  height: 60px;
   border-radius: 30px;
   border-width: 1px;
+  color: var(--gray-color);
+  height: 60px;
   margin-top: 40px;
+  width: 226px;
 }
 
 .blog-info {
-  display: inline-flex;
   align-items: center;
+  display: inline-flex;
   margin-bottom: 26px;
 }
 
 .blog-info img {
   border-radius: 50%;
-  width: 50px;
   margin-right: 10px;
+  width: 50px;
 }
 
 .blog-info span {
@@ -153,24 +173,27 @@ body {
 
 .footer {
   background-color: var(--black-color);
+  display: inline-flex;
   height: 425px;
+  /*padding: 0 20%;*/
+  /*min-width: 900px;*/
+  justify-content: center;
   width: 100%;
-  padding: 0 20%;
-  min-width: 900px;
 }
 
 .footer-wrap {
-  height: inherit;
   display: inline-flex;
   flex-direction: row;
+  height: inherit;
+  max-width: 900px;
 }
 
 .footer-info {
-  width: 50%;
-  height: inherit;
   display: inline-flex;
   flex-direction: column;
+  height: inherit;
   justify-content: center;
+  width: 50%;
 }
 
 .footer-info:last-of-type {
@@ -183,6 +206,6 @@ body {
 
 .footer-info span {
   color: var(--gray-color);
-  line-height: 30px;
   font-size: 20px;
+  line-height: 30px;
 }
